@@ -1,0 +1,8 @@
+@use "../var";
+
+.container {
+  @include var.container-style;
+  margin: 1rem 0;
+  width: 100%;
+  height: calc(100vh - 11rem);
+}

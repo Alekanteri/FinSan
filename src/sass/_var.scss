@@ -1,1 +1,28 @@
+//!______Background________
+
 $main-bg: #161616;
+$elem-bg: #1d1d1f;
+$elem-hover-bg: #393a3e;
+
+//!_____ElementColor_______
+
+$main-purple: #ad92fc;
+$main-green: #d8ffa9;
+$main-blue: #b5f2ee;
+
+//!_____TextColor_________
+
+$white-text: #dbdbdb;
+$red-text: #a52219;
+$green-text: #147747;
+
+//!_________________________
+
+
+
+@mixin container-style {
+  background-color: $elem-bg;
+  border-radius: 0.5rem;
+  box-shadow:  5px 5px 6px #1d1d1d,
+              -5px -5px 6px #202020;
+}

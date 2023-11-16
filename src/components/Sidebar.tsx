@@ -1,11 +1,6 @@
 import React from "react";
 import styles from "../sass/components/Sidebar.module.scss";
-import { GoHome} from "react-icons/go";
-import { AiOutlinePieChart } from "react-icons/ai";
-import { BiLineChart } from "react-icons/bi";
-import { AiOutlineLineChart } from 'react-icons/ai'
-import { SiMarketo } from 'react-icons/si'
-
+import { MdOutlineSettings, MdOutlineAccountCircle, MdOutlineHome, MdOutlinePieChart, MdOutlineStackedLineChart, MdOutlineMultilineChart, MdOutlineShoppingBag } from "react-icons/md";
 const Sidebar: React.FC = () => {
   const [activeIndex, setActiveIndex] = React.useState<number>(0);
 
@@ -15,48 +10,47 @@ const Sidebar: React.FC = () => {
 
   return (
     <div className={styles.sidebar}>
-      <div className={styles.sidebarContainer}>
+      <div>
         <ul>
           <li
             onClick={() => handleClickActiveIndex(0)}
             className={activeIndex === 0 ? styles.active : styles.sidebarBtn}
           >
-            <span className={styles.icon}><GoHome size={18} /></span>
-              Dashboard
+              <MdOutlineHome />
           </li>
           <li
             className={activeIndex === 1 ? styles.active : styles.sidebarBtn}
             onClick={() => handleClickActiveIndex(1)}
           >
-            <span className={styles.icon}>
-              <AiOutlinePieChart size={18} />
-            </span>
-            Market update
+              <MdOutlinePieChart />
           </li>
           <li
             className={activeIndex === 2 ? styles.active : styles.sidebarBtn}
             onClick={() => handleClickActiveIndex(2)}
           >
-            <span className={styles.icon}>
-              <BiLineChart size={18} />
-            </span>
-            Income estimator
+              <MdOutlineStackedLineChart />
           </li>
           <li
             className={activeIndex === 3 ? styles.active : styles.sidebarBtn}
             onClick={() => handleClickActiveIndex(3)}
           >
-            <span className={styles.icon}><AiOutlineLineChart size={18} /></span>
-            Intractive chart
+            <MdOutlineMultilineChart />
           </li>
           <li
             className={activeIndex === 4 ? styles.active : styles.sidebarBtn}
             onClick={() => handleClickActiveIndex(4)}
           >
-            <span className={styles.icon}><SiMarketo size={18}/></span>
-            Mutual funds
+            <MdOutlineShoppingBag />
           </li>
         </ul>
+      </div>
+      <div className={styles.sideBarMenu}>
+        <div className={`${styles.sidebarBtn}`}>
+          <MdOutlineAccountCircle size={18} />
+        </div>
+        <div className={`${styles.sidebarBtn}`}>
+          <MdOutlineSettings size={18}/>
+        </div>
       </div>
     </div>
   );
