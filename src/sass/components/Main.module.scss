@@ -1,8 +1,36 @@
 @use "../var";
 
 .container {
-  @include var.container-style;
   margin: 1rem 0;
   width: 100%;
-  height: calc(100vh - 11rem);
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  gap: 1rem;
+}
+
+.visualBlockBody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+}
+
+.visualBlock {
+  @include var.container-style;
+  width: 100%;
+  max-height: 10rem;
+  overflow-y: auto;
+}
+
+.sheetBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-height: 300px
+}
+
+.sheetBlock {
+  @include var.container-style;
+  max-height: 100%;
+  overflow-y: auto;
 }

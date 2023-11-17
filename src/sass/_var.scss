@@ -23,6 +23,4 @@ $green-text: #147747;
 @mixin container-style {
   background-color: $elem-bg;
   border-radius: 0.5rem;
-  box-shadow:  5px 5px 6px #1d1d1d,
-              -5px -5px 6px #202020;
 }
